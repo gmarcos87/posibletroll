@@ -1,4 +1,4 @@
-var cantidadDeCaracteresNumeriosParaSerConsideradoUnTroll = 5
+var cantidadDeCaracteresNumericosParaSerConsideradoUnTroll = 5
 
 function esUnNombreDeUsuarie (texto) {
     return texto.length > 0 && texto[0] == "@"
@@ -6,9 +6,9 @@ function esUnNombreDeUsuarie (texto) {
 
 function esUnPosibleTroll(nombreDeUsuarie) {
     var resultadoDeLaRegexp = /(\d+)"*$/.exec(nombreDeUsuarie)
-    //No si no tiene numeros al final del nombre?
+    //No si no tiene números al final del nombre
     if (resultadoDeLaRegexp === null) return false 
-    //Si porque tiene numeros al final y de más de X caracteres
+    //Si porque tiene números al final y es de más de X cantidad de caracteres
     return resultadoDeLaRegexp[0].length > cantidadDeCaracteresNumeriosParaSerConsideradoUnTroll 
 }
 
@@ -32,3 +32,5 @@ function buscarSospechas() {
 
 document.addEventListener("load", buscarSospechas)
 document.addEventListener("scroll", buscarSospechas)
+
+
