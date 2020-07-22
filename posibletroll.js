@@ -9,7 +9,7 @@ function esUnPosibleTroll(nombreDeUsuarie) {
     //No si no tiene números al final del nombre
     if (resultadoDeLaRegexp === null) return false 
     //Si porque tiene números al final y es de más de X cantidad de caracteres
-    return resultadoDeLaRegexp[0].length > cantidadDeCaracteresNumeriosParaSerConsideradoUnTroll 
+    return resultadoDeLaRegexp[0].length > cantidadDeCaracteresNumericosParaSerConsideradoUnTroll 
 }
 
 function aplicarEstilo(elemento) {
