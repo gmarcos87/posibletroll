@@ -6,8 +6,10 @@ function esUnNombreDeUsuarie (texto) {
 
 function esUnPosibleTroll(nombreDeUsuarie) {
     var resultadoDeLaRegexp = /(\d+)"*$/.exec(nombreDeUsuarie)
-    if (resultadoDeLaRegexp === null) return false //No tiene numeros al final del nombre
-    return resultadoDeLaRegexp[0].length > cantidadDeCaracteresNumeriosParaSerConsideradoUnTroll //Tiene y más de X canitdad
+    //No si no tiene numeros al final del nombre?
+    if (resultadoDeLaRegexp === null) return false 
+    //Si porque tiene numeros al final y de más de X caracteres
+    return resultadoDeLaRegexp[0].length > cantidadDeCaracteresNumeriosParaSerConsideradoUnTroll 
 }
 
 function aplicarEstilo(elemento) {
